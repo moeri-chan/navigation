@@ -49,4 +49,5 @@ group :test, :development do
       gem 'capybara'
       gem 'cucumber'
       gem 'guard-rspec'
+      gem 'launchy'
 end
