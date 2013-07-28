@@ -12,7 +12,7 @@ describe "Posts" do
       visit posts_path
       fill_in 'post_title', :with => 'Second Post'
       fill_in 'post_content', :with => 'second content'
-      click_button 'Add Post'
+      click_button 'Create Post'
       
       current_path.should == posts_path
       page.should have_content 'Second Post'
