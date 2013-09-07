@@ -44,6 +44,8 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'bcrypt-ruby', '~> 3.0.0'
+
 group :test, :development do
       gem 'rspec-rails'
       gem 'capybara'
