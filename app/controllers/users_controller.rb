@@ -3,12 +3,12 @@ class UsersController < ApplicationController
     @user = User.new
     @users = User.all
   end
-=begin  
+
   def create
-    Post.create post_params
+    User.create user_params
     redirect_to :back
   end
-
+=begin  
   def edit
     @post = Post.find id_params 
   end
@@ -26,11 +26,11 @@ class UsersController < ApplicationController
     Post.destroy id_params
     redirect_to :back, :notice => 'Post has been deleted.' 
   end
-
-  def post_params
-    params.require(:post).permit(:title, :content)
+=end
+  def user_params
+    params.require(:user).permit(:user, :password, :password_conformation)
   end
-
+=begin
   def id_params
     params.require(:id)
   end
