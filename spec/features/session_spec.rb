@@ -6,12 +6,12 @@ describe "Posts" do
   end
   describe "GET /sessions" do
     it "create a new session" do
-      visit log_in
+      visit log_in_path
       fill_in 'user_name', :with => 'first_user'
       fill_in 'user_password', :with => 'first_password'
-      click_button 'Sign In'
+      click_button 'Log In'
       
-      current_path.should == log_in
+      current_path.should == log_in_path
       page.should have_content 'signed in'
 
     end

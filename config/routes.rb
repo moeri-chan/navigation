@@ -1,6 +1,6 @@
 Blog::Application.routes.draw do
 
-  get "sessions/new"
+  
   get "log_in" => "sessions#new", :as => "log_in"
   resources :sessions
   
