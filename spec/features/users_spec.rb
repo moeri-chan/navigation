@@ -25,13 +25,18 @@ describe "Users" do
   describe "PUT /users" do
     it "should edit a user" do
       visit users_path
-      click_link 'edit_user1'
+      click_link 'Edit'
       fill_in 'user_name', :with => 'edited_user'
-      click_button 'Edit User'
+      click_button 'Update User'
 
       current_path.should == users_path
 
       page.should have_content 'edited_user'
+    end
+    it "should delete a user" do
+      visit users_path
+      click_link "Delete"
+      page.should_not have_content 'first_user'
     end
   end
 end
