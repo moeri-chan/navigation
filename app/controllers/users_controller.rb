@@ -8,6 +8,10 @@ class UsersController < ApplicationController
     User.create user_params
     redirect_to :back
   end
+  
+  def new
+    @user = User.new
+  end
 =begin  
   def edit
     @post = Post.find id_params 
@@ -28,7 +32,7 @@ class UsersController < ApplicationController
   end
 =end
   def user_params
-    params.require(:user).permit(:user, :password, :password_conformation)
+    params.require(:user).permit(:name, :password, :password_confirmation)
   end
 =begin
   def id_params
