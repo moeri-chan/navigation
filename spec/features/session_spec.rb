@@ -16,16 +16,20 @@ describe "Posts" do
 
     end
   end
-=begin
 
-  describe "DELETE /posts" do
+  describe "When logged in" do
+    before :each do
+      visit log_in_path
+      fill_in 'user_name', :with => 'first_user'
+      fill_in 'user_password', :with => 'first_password'
+      click_button 'Log In'
+    end
     it "should delete a session" do
-      visit posts_path
-      find("#post_#{@post.id}").click_link 'Delete'
-      page.should have_content 'Post has been deleted'
-      page.should have_no_content 'First Post'
+
+      visit log_in_path
+      click_link 'Log Out'
+      page.should have_content 'signed out'
       
     end
   end
-=end
 end
