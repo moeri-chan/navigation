@@ -46,6 +46,9 @@ end
 
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+#Twitter Bootstrap 
+gem 'bootstrap-sass'
+
 group :test, :development do
       gem 'rspec-rails'
       gem 'capybara'
