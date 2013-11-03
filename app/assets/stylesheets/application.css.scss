@@ -1,0 +1,31 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+$body-bg: #ffffd8;
+$navbar-default-bg: #000000;
+$nav-link-hover-bg: #ffff00;
+
+$nav-link-color: #ffff00;
+$nav-link-hover-color: #000000;
+
+@import "bootstrap";
+
+.navbar .nav > li > a 
+{
+    color:  $nav-link-color;    
+}
+.navbar .nav > li:hover > a 
+{
+    color:  $nav-link-hover-color;    
+}
