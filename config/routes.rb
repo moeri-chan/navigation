@@ -1,12 +1,16 @@
 Blog::Application.routes.draw do
 
 
+  
+
   get "log_in" => "sessions#new", :as => "log_in"
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "posts/index"
   get "users/index"
 
-  resources :posts
+  resources :posts do
+    resources :comments, shallow: true
+  end
   resources :sessions  
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.

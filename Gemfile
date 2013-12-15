@@ -49,6 +49,9 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 #Twitter Bootstrap 
 gem 'bootstrap-sass'
 
+gem 'execjs'
+gem 'therubyracer', :platforms => :ruby
+
 group :test, :development do
       gem 'rspec-rails'
       gem 'capybara'
