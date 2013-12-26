@@ -7,8 +7,8 @@ describe "Comments" do
     @comment = Comment.create :title => 'First Comment', :content => 'first content', :parent => @parent
   end
   describe "GET /comments" do
-    it "display some comments" 
-      visit posts_path
+    it "display some comments"
+#      visit post_comments_path(@parent)
 #      page.should have_content 'Parent Post' 
 #      pending("more")
 #    end
@@ -26,7 +26,7 @@ describe "Comments" do
   end
   describe "PUT /comments" do
     it "edits a comment" 
-#      visit posts_path
+#      visit edit_comment_path
 #      click_link 'Edit'
 
 #      current_path.should == edit_post_path(@post)

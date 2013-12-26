@@ -56,6 +56,7 @@ group :test, :development do
       gem 'rspec-rails'
       gem 'capybara'
       gem 'cucumber'
+      gem 'shoulda-matchers'
       gem 'guard-rspec'
       gem 'launchy'
 end
