@@ -4,61 +4,56 @@ describe "Comments" do
   before do
     @parent = Post.create :title => 'Parent Post', :content => 'Parent Content'
 
-    @comment = Comment.create :title => 'First Comment', :content => 'first content', :parent => @parent
+    @comment = Comment.create :title => 'First Comment', :content => 'first content', :post => @parent
   end
-  describe "GET /comments" do
-    it "display some comments"
-#      visit post_comments_path(@parent)
-#      page.should have_content 'Parent Post' 
-#      pending("more")
-#    end
+  describe "GET /posts/1/comments" do
+    it "should display some comments" do
+      visit post_comments_path(@parent)
+      page.should have_content 'First Comment' 
+    end
     
-    it "create a new comment"
-#      visit posts_path
-#      fill_in 'post_title', :with => 'Second Post'
-#      fill_in 'post_content', :with => 'second content'
-#      click_button 'Create Post'
+    it "create a new comment" do
+      visit post_comments_path(@parent)
+      fill_in 'comment_title', :with => 'Second Comment'
+      fill_in 'comment_content', :with => 'second comment content'
+      click_button 'Create Comment'
       
-#      current_path.should == posts_path
-#      page.should have_content 'Second Post'
+      current_path.should == post_comments_path(@parent)
+      page.should have_content 'Second Comment'
 
-#    end
+    end
   end
   describe "PUT /comments" do
-    it "edits a comment" 
-#      visit edit_comment_path
-#      click_link 'Edit'
-
-#      current_path.should == edit_post_path(@post)
+    it "edits a comment" do
+      visit edit_comment_path(@comment)
       
-#      find_field('post_title').value.should == 'First Post'
-#      fill_in 'post_title', :with => 'Updated Post'
-#      click_button 'Update Post'
+      find_field('comment_title').value.should == 'First Comment'
+      fill_in 'comment_title', :with => 'Updated Comment'
+      click_button 'Update Comment'
       
-#      current_path.should == posts_path
+      current_path.should == post_comments_path(@parent)
 
-#      page.should have_content 'Updated Post'
-#    end
+      page.should have_content 'success'
+    end
     
-    it "should not update an empty comment"
-#      visit posts_path
-#      click_link 'Edit'
+    it "should not update an empty comment" do
+      visit edit_comment_path(@comment)
       
-#      fill_in 'post_title', :with => ''
-#      click_button 'Update Post'
+      fill_in 'comment_title', :with => ''
+      click_button 'Update Comment'
       
-#      current_path.should == edit_post_path(@post)
-#      page.should have_content 'There was an error updating your post.'
-#    end
+      current_path.should == edit_comment_path(@comment)
+      page.should have_content 'There was an error updating your comment.'
+    end
   end
 
   describe "DELETE /comment" do
-    it "should delete a comment"
-#      visit posts_path
-#      find("#post_#{@post.id}").click_link 'Delete'
+    it "should delete a comment" do
+      visit post_comments_path(@parent)
+      find("#comment_#{@comment.id}").click_link 'Delete'
 #      page.should have_content 'Post has been deleted'
 #      page.should have_no_content 'First Post'
       
-#    end
+    end
   end
 end

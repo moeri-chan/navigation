@@ -53,6 +53,7 @@ GEM
       multi_json (~> 1.7.5)
       multi_test (>= 0.0.2)
     diff-lcs (1.2.4)
+    docile (1.1.5)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -152,6 +153,11 @@ GEM
       rdoc (~> 3.10)
     shoulda-matchers (2.4.0)
       activesupport (>= 3.0.0)
+    simplecov (0.8.2)
+      docile (~> 1.1.0)
+      multi_json
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
     slop (3.4.6)
     sprockets (2.10.0)
       hike (~> 1.2)
@@ -201,6 +207,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   shoulda-matchers
+  simplecov
   sqlite3
   therubyracer
   turbolinks

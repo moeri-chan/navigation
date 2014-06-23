@@ -53,10 +53,15 @@ gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
 
 group :test, :development do
+      gem 'simplecov', :require => false, :group => :test
       gem 'rspec-rails'
       gem 'capybara'
       gem 'cucumber'
       gem 'shoulda-matchers'
       gem 'guard-rspec'
       gem 'launchy'
+end
+
+group :test do
+      gem 'simplecov', :require => false
 end
