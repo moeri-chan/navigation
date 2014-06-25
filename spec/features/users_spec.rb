@@ -33,6 +33,16 @@ describe "Users" do
 
       page.should have_content 'edited_user'
     end
+    it "should fail to edit a user" do
+      visit users_path
+      click_link 'Edit'
+      fill_in 'user_name', :with => ''
+      click_button 'Update User'
+
+      page.should have_content 'There was an error updating the User.'
+    end
+  end
+  describe "DELETE /user" do
     it "should delete a user" do
       visit users_path
       click_link "Delete"

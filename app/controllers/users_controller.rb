@@ -20,9 +20,9 @@ class UsersController < ApplicationController
   def update
     user = User.find id_params
     if user.update_attributes user_params
-      redirect_to users_path, :notice => 'Your task has successfully been updated'
+      redirect_to users_path, :notice => 'User successfully updated'
     else
-      redirect_to :back, :notice => 'There was an error updating your post.'
+      redirect_to :back, :notice => 'There was an error updating the User.'
     end
   end
  
