@@ -66,5 +66,5 @@ group :test do
       gem 'simplecov', :require => false
 end
 
-gem 'mongoid', '~> 4', github: 'mongoid/mongoid'
+gem 'mongoid', '~> 4.0.0' 
 gem 'bson_ext'
