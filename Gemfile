@@ -67,4 +67,5 @@ group :test do
 end
 
 gem 'mongoid', '~> 4.0.0' 
+gem 'mongoid-rspec'#, '~> 1.11.0'
 gem 'bson_ext'
