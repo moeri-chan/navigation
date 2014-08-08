@@ -23,7 +23,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    Post.destroy id_params
+    Post.find(id_params).destroy
     redirect_to :back, :notice => 'Post has been deleted.' 
   end
 
