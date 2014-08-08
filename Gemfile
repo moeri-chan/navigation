@@ -62,10 +62,6 @@ group :test, :development do
       gem 'launchy'
 end
 
-group :test do
-      gem 'simplecov', :require => false
-end
-
 gem 'mongoid', '~> 4.0.0' 
 gem 'mongoid-rspec'#, '~> 1.11.0'
 gem 'bson_ext'
