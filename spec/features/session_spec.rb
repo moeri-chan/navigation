@@ -15,6 +15,16 @@ describe "Posts" do
       page.should have_content 'signed in'
 
     end
+    it "should not create a new session for an incorrect password" do
+      visit log_in_path
+      fill_in 'user_name', :with => 'first_user'
+      fill_in 'user_password', :with => 'incorrect_password'
+      click_button 'Log In'
+      
+      current_path.should == log_in_path
+      page.should have_content 'Invalid email or password'
+
+    end
   end
 
   describe "When logged in" do

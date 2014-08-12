@@ -16,9 +16,4 @@ class SessionsController < ApplicationController
     flash.alert = "Now signed out"
     redirect_to :back
   end
-  
-  def log_in_params
-    params.require(:user_name)
-    params.require(:user_password)
-  end
 end
