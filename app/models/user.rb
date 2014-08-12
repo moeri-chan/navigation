@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
+  include Mongoid::Document
   has_secure_password
-  validates :password_digest, presence: true
-  validates :name, presence: true
+  field :name
+  validates_presence_of :name
+  validates_presence_of :password_digest
 end

@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   end
  
   def destroy
-    User.destroy id_params
+    User.find(id_params).destroy
     redirect_to :back, :notice => 'Post has been deleted.' 
   end
 
