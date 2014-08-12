@@ -1,9 +1,6 @@
 class SessionsController < ApplicationController
-  def new
-  end
-  
   def create
-    user = User.find_by_name(params[:user_name])
+    user = User.where(name: params[:user_name]).first
     if user && user.authenticate(params[:user_password])
       session[:user_id] = user.id
       flash.alert = "Now signed in"
