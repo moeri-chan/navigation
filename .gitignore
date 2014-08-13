@@ -15,4 +15,9 @@
 /log/*.log
 /tmp
 
-/coverage/*
+/coverage
+
+.env
+
+#ignore emacs temp files
+*~
