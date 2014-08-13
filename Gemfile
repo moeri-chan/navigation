@@ -51,6 +51,7 @@ group :test, :development do
       gem 'shoulda-matchers'
       gem 'guard-rspec'
       gem 'launchy'
+      gem 'foreman'
 end
 
 gem 'mongoid', '~> 4.0.0' 
