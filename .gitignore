@@ -15,4 +15,12 @@
 /log/*.log
 /tmp
 
+
 /coverage/*
+
+.env
+
+public/assets
+
+#ignore emacs temp files
+*~
