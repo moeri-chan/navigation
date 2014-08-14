@@ -41,7 +41,6 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'bootstrap-sass'
 
 gem 'execjs'
-gem 'therubyracer', :platforms => :ruby
 
 group :test, :development do
       gem 'simplecov', :require => false, :group => :test
