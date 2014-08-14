@@ -19,5 +19,7 @@
 
 .env
 
+public/assets
+
 #ignore emacs temp files
 *~
