@@ -51,6 +51,11 @@ group :test, :development do
       gem 'guard-rspec'
       gem 'launchy'
       gem 'foreman'
+
+group :development do
+    gem 'travis-lint'
+end
+
 end
 
 gem 'mongoid', '~> 4.0.0' 

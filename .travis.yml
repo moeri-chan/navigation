@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 2.1.2
+services:
+  - mongodb
+branches:
+  only:
+    - master
+    - heroku-mongoid
