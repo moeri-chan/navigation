@@ -43,7 +43,7 @@ gem 'bootstrap-sass'
 gem 'execjs'
 
 group :development do
-    gem travis-lint
+    gem 'travis-lint'
 end
 
 group :test, :development do
