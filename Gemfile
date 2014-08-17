@@ -42,14 +42,18 @@ gem 'bootstrap-sass'
 
 gem 'execjs'
 
+group :development do
+    gem travis-lint
+end
+
 group :test, :development do
-      gem 'simplecov', :require => false, :group => :test
-      gem 'rspec-rails'
-      gem 'capybara'
-      gem 'cucumber'
-      gem 'shoulda-matchers'
-      gem 'guard-rspec'
-      gem 'launchy'
+    gem 'simplecov', :require => false, :group => :test
+    gem 'rspec-rails'
+    gem 'capybara'
+    gem 'cucumber'
+    gem 'shoulda-matchers'
+    gem 'guard-rspec'
+    gem 'launchy'
 end
 
 gem 'mongoid', '~> 4.0.0' 
