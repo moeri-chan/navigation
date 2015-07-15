@@ -6,11 +6,11 @@ require 'spec_helper'
 describe User do
   it "should create a new user" do
     user = User.new :name => 'new', :password => 'pass', :password_confirmation => 'pass'
-    user.should be_valid
+    expect(user).to be_valid
   end
   it "should require a password" do
     user = User.new :name => 'new'
-    user.should_not be_valid
+    expect(user).to_not be_valid
   end
 
 end
