@@ -11,8 +11,8 @@ describe "Posts" do
       fill_in 'user_password', :with => 'first_password'
       click_button 'Log In'
       
-      current_path.should == log_in_path
-      page.should have_content 'signed in'
+      expect(current_path).to eq log_in_path
+      expect(page).to have_content 'signed in'
 
     end
     it "should not create a new session for an incorrect password" do
@@ -21,8 +21,8 @@ describe "Posts" do
       fill_in 'user_password', :with => 'incorrect_password'
       click_button 'Log In'
       
-      current_path.should == log_in_path
-      page.should have_content 'Invalid email or password'
+      expect(current_path).to eq log_in_path
+      expect(page).to have_content 'Invalid email or password'
 
     end
   end
@@ -38,7 +38,7 @@ describe "Posts" do
 
       visit log_in_path
       click_link 'Log Out'
-      page.should have_content 'signed out'
+      expect(page).to have_content 'signed out'
       
     end
   end

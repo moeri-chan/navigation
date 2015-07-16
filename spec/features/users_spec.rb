@@ -7,7 +7,7 @@ describe "Users" do
   describe "GET /users" do
     it "should display user list" do
       visit users_path
-      page.should have_content 'first_user' 
+      expect(page).to have_content 'first_user' 
     end
     it "should create a new user" do
       visit new_user_path
@@ -16,10 +16,10 @@ describe "Users" do
       fill_in 'user_password_confirmation', :with => 'pass'
       click_button 'Create User'
 
-      current_path.should == new_user_path
+      expect(current_path).to eq new_user_path
 
       visit users_path
-      page.should have_content 'second_user'
+      expect(page).to have_content 'second_user'
     end
   end
   describe "PUT /users" do
@@ -29,9 +29,9 @@ describe "Users" do
       fill_in 'user_name', :with => 'edited_user'
       click_button 'Update User'
 
-      current_path.should == users_path
+      expect(current_path).to eq users_path
 
-      page.should have_content 'edited_user'
+      expect(page).to have_content 'edited_user'
     end
     it "should fail to edit a user" do
       visit users_path
@@ -39,14 +39,14 @@ describe "Users" do
       fill_in 'user_name', :with => ''
       click_button 'Update User'
 
-      page.should have_content 'There was an error updating the User.'
+      expect(page).to have_content 'There was an error updating the User.'
     end
   end
   describe "DELETE /user" do
     it "should delete a user" do
       visit users_path
       click_link "Delete"
-      page.should_not have_content 'first_user'
+      expect(page).to_not have_content 'first_user'
     end
   end
 end
