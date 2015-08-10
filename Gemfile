@@ -56,6 +56,7 @@ group :test, :development do
     gem 'launchy'
 end
 
+gem 'bower-rails'
 gem 'mongoid'
 gem 'mongoid-rspec'#, '~> 1.11.0'
 gem 'bson_ext'
