@@ -16,7 +16,9 @@ ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 RSpec.configure do |config|
   config.include Rails.application.routes.url_helpers
   config.before :each do
-    Mongoid.default_session.collections.select {|c| c.name !~ /system/ }.each(&:drop)
+    #Mongoid.default_session.collections.select {|c| c.name !~ /system/ }.each(&:drop)
+    #Need to get this working
+    Mongoid.default_client.list_databases.drop
   config.include Capybara::DSL
   end
   # ## Mock Framework

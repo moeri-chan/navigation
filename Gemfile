@@ -58,6 +58,6 @@ end
 
 gem 'bower-rails'
 gem 'mongoid'
-gem 'mongoid-rspec'#, '~> 1.11.0'
+gem 'mongoid-rspec'
 gem 'bson_ext'
 gem 'devise'
