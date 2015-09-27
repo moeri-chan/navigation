@@ -18,7 +18,7 @@ RSpec.configure do |config|
   config.before :each do
     #Mongoid.default_session.collections.select {|c| c.name !~ /system/ }.each(&:drop)
     #Need to get this working
-    Mongoid.default_client.list_databases.drop
+    #Mongoid.default_client.list_databases.drop
   config.include Capybara::DSL
   end
   # ## Mock Framework
