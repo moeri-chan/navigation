@@ -13,14 +13,15 @@
  */
 
 $body-bg: #ffffd8;
-$navbar-default-bg: #000000;
-$nav-link-hover-bg: #ffff00;
+$navbar-default-bg: #ff96ca;
+$nav-link-hover-bg: #ff69b4;
 
-$nav-link-color: #ffff00;
+$nav-link-color: #000000;
 $nav-link-hover-color: #000000;
 
-@import "bootstrap";
-@import "bootstrap/theme";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap-sprockets";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/theme";
 
 .navbar .nav > li > a 
 {

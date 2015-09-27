@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '~> 4.2.1'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 5.0.3'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -19,7 +19,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -35,12 +35,12 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby'
+
+gem 'execjs'
 
 #Twitter Bootstrap 
 gem 'bootstrap-sass'
-
-gem 'execjs'
 
 group :test, :development do
       gem 'simplecov', :require => false, :group => :test
@@ -58,9 +58,11 @@ end
 
 end
 
-gem 'mongoid', '~> 4.0.0' 
-gem 'mongoid-rspec'#, '~> 1.11.0'
+gem 'bower-rails'
+gem 'mongoid'
+gem 'mongoid-rspec'
 gem 'bson_ext'
 gem 'rails_12factor', group: :production
 
-ruby "2.1.2"
+ruby "2.2.1"
+gem 'devise'

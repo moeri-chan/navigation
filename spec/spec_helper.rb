@@ -14,8 +14,10 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
+  config.include Rails.application.routes.url_helpers
   config.before :each do
-    Mongoid.default_session.collections.select {|c| c.name !~ /system/ }.each(&:drop)
+  Mongoid.purge!
+  config.include Capybara::DSL
   end
   # ## Mock Framework
   #
