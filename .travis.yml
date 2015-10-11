@@ -9,3 +9,4 @@ deploy:
   provider: heroku
   api_key: "eb6b1d5f-2db7-4b46-92ba-82bbb447c2a2"
   app: moeriism
+  on: heroku-mongoid
