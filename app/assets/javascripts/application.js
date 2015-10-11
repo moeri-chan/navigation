@@ -16,3 +16,4 @@
 //= require_tree .
 // Loads all Bootstrap javascripts
 //= require bootstrap
+var app = angular.module("moeriism", ["blog"]);
