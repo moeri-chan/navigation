@@ -133,4 +133,6 @@ test:
 production:
   clients:
     default:
-      uri: mongodb://b
+      uri: mongodb://blog:test_blog@ds041673.mongolab.com:41673/blog
+      options:
+        max_pool_size: 1
