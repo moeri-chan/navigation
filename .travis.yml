@@ -1,11 +1,8 @@
 language: ruby
 rvm:
   - 2.2.1
-services:
-  - mongodb
 branches:
   only:
-    - master
     - heroku-mongoid
 sudo: false
 deploy:
