@@ -1,4 +1,5 @@
-<%=render :partial => 'layouts/navbar' %>
+<ng-include src="'navbars'"></ng-include>
+
 <%= form_for @link do |f| %>
 <%= f.label :title %>
 <%= f.text_field :title %>
@@ -11,3 +12,7 @@
   <%= link.url %> |
   <%= link_to 'Delete', link, :method => 'delete' %> </li>
 <% end %>
+Write some text in textbox:
+<input type="text" ng-model="sometext" />
+
+    <h1>Hello {{ sometext }}</h1>

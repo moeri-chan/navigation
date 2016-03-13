@@ -1,0 +1,7 @@
+<nav class="navbar navbar-default" role="navigation">
+  <ul class="nav nav-pills container">
+    <% for link in @links %>
+    <li id="link_<%= link.id %>"><%= link_to link.title,link.url %></li>
+    <% end %>
+  </ul>
+</nav>
