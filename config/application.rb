@@ -28,5 +28,11 @@ module Blog
     config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official","assets","fonts")
     
     config.assets.precompile << %r(.*.(?:eot|svg|ttf|woff)$)
+    config.action_dispatch.default_headers = {
+      'Access-Control-Allow-Origin' => '*',
+      'Access-Control-Allow-Methods' => 'POST, PUT, DELETE, GET, OPTIONS',
+      'Access-Control-Request-Method' => '*',
+      'Access-Control-Allow-Headers' => 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+    }
   end
 end

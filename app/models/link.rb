@@ -1,8 +1,7 @@
-class Post
+class Link
   include Mongoid::Document
   field :title
-  field :content
+  field :url
   validates_presence_of :title
-  embeds_many :posts
-  belongs_to :post
+  validates_presence_of :url
 end
