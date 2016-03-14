@@ -28,6 +28,7 @@ module Blog
     config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official","assets","fonts")
     
     config.assets.precompile << %r(.*.(?:eot|svg|ttf|woff)$)
+    config.assets.prefix = "/navigation/assets"
     config.action_dispatch.default_headers = {
       'Access-Control-Allow-Origin' => '*',
       'Access-Control-Allow-Methods' => 'POST, PUT, DELETE, GET, OPTIONS',
