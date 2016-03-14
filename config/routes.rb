@@ -1,9 +1,9 @@
 Blog::Application.routes.draw do
-
-  resources :links, except: [:new, :edit, :show]
-
-  resource :navbars, only: [:show]
-  
+  scope '/navigation' do
+    root 'links#index'
+    resources :links, except: [:new, :edit, :show]
+    resource :navbars, only: [:show]
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
